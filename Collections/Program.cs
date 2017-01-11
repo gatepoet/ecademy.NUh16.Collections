@@ -10,6 +10,15 @@ namespace Collections
     {
         static void Main(string[] args)
         {
+            var classRoom = new ClassRoom();
+
+            classRoom.Register(new Student { Name = "Kristoffer", Age = 34 });
+            classRoom.Register(new Student { Name = "Åge", Age = 54 });
+            classRoom.Register(new Student { Name = "Stine", Age = 44 });
+
+            Console.WriteLine("Gjennomsnittlig alder: " + classRoom.AverageStudentAge);
+
+            Console.ReadKey();
         }
     }
 }
